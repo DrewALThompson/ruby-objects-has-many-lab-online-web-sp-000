@@ -1,6 +1,6 @@
 class Author
   
-  attr_accessor :name 
+  attr_accessor :name
   @@count = 0
 
   def initialize(name)
@@ -9,7 +9,7 @@ class Author
   end
   
   def posts
-    Post.all.select {|title| self.author == self }
+    Post.all.select {|title| title.author == self }
   end
   
   def add_post(phost)
