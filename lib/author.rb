@@ -8,6 +8,7 @@ class Author
   end
   
   def posts
+    Post.all.select {|title| self.post}
   
   
   
